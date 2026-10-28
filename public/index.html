@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarship Eligibility and Application Deadline Navigator | AidPath</title>
+  <meta name="description" content="Curated sourced scholarship directory, rule-based eligibility explanations, document checklists, application pipeline stages, and stale-record review." />
+  
+  <!-- Custom Design System Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="header-top">
+      <a href="#" class="brand-wrapper" onclick="window.location.hash=''; location.reload();">
+        <div class="brand-icon">🎓</div>
+        <div class="brand-text">
+          <h1>AidPath Navigator</h1>
+          <p>Verified Scholarship & Deadline Hub</p>
+        </div>
+      </a>
+
+      <!-- Header Controls: Persona Switcher & Profile -->
+      <div class="header-controls">
+        <div class="persona-switcher">
+          <label for="persona-select">Persona:</label>
+          <select id="persona-select" class="persona-select" title="Switch between Student, Operator, Admin, or Visitor">
+            <option value="11111111-1111-4111-a111-111111111111">Elena Rostova (STUDENT)</option>
+            <option value="22222222-2222-4222-a222-222222222222">Marcus Chen (STUDENT)</option>
+            <option value="33333333-3333-4333-a333-333333333333">Sarah Jenkins (OPERATOR)</option>
+            <option value="44444444-4444-4444-a444-444444444444">Dr. Arthur Vance (ADMIN)</option>
+            <option value="visitor">Guest Visitor (VISITOR)</option>
+          </select>
+          <span id="user-role-badge" class="role-badge student">STUDENT</span>
+        </div>
+
+        <button class="header-btn" id="btn-edit-profile" title="Configure Profile Criteria">
+          <span>✏️</span>
+          <span>Profile Criteria</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs Bar -->
+    <nav class="nav-tabs-bar" aria-label="Main Navigation">
+      <button class="nav-tab active" data-tab="landing">
+        <span>🏠</span>
+        <span>Overview &amp; Journey</span>
+      </button>
+      <button class="nav-tab" data-tab="directory">
+        <span>📚</span>
+        <span>Curated Directory</span>
+      </button>
+      <button class="nav-tab" data-tab="eligibility">
+        <span>⚡</span>
+        <span>Eligibility Explanations</span>
+      </button>
+      <button class="nav-tab" data-tab="applications">
+        <span>🎯</span>
+        <span>Application Pipeline</span>
+      </button>
+      <button class="nav-tab" data-tab="staleReview" style="display: none;">
+        <span>🛡️</span>
+        <span>Stale Record Review</span>
+        <span class="nav-tab-badge warning" id="nav-stale-badge">Review</span>
+      </button>
+      <button class="nav-tab" data-tab="admin" style="display: none;">
+        <span>⚙️</span>
+        <span>Administration &amp; Audits</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main View Container -->
+  <main class="main-container" id="main-content-view">
+    <!-- Populated dynamically by JavaScript router -->
+    <div style="text-align: center; padding: 4rem;">
+      <div class="loading-spinner"></div>
+      <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.95rem;">Initializing AidPath Navigator...</p>
+    </div>
+  </main>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Application Footer -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <div>
+        <strong style="color: var(--plum-900);">AidPath Navigator</strong> &mdash; Scholarship Eligibility &amp; Application Deadline System
+        <div style="margin-top: 0.25rem;">
+          Stack: Semantic HTML5 &bull; Custom CSS3 &bull; Vanilla JS &bull; Node.js / Express &bull; Supabase PostgreSQL
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+        <span id="db-status-badge" style="font-weight: 600; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+          ⚪ Checking DB...
+        </span>
+        <span>&bull;</span>
+        <span>Audited SLA: 90 Days</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript Application Module -->
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
